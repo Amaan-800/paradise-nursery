@@ -458,3 +458,39 @@ text-align: center;
 color: #666;
 margin-top: 50px;
 }
+
+/* ABOUT PAGE */
+
+.about-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #e8f5e9,
+    #f4fff4
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.about-card {
+  background: white;
+  max-width: 850px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.about-card h1 {
+  color: #2e8b57;
+  margin-bottom: 25px;
+}
+
+.about-card p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
