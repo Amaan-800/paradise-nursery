@@ -1,0 +1,460 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4fff4;
+}
+
+h1 {
+  text-align: center;
+  color: #2e8b57;
+}
+
+h2 {
+  color: #246b45;
+  margin-left: 20px;
+}
+
+.plant-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.plant-card {
+  width: 250px;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+.plant-card img {
+  border-radius: 10px;
+}
+.plant-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 12px;
+}
+
+button {
+  background: #2e8b57;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #246b45;
+}
+
+/* LANDING PAGE */
+
+.landing-page {
+height: 100vh;
+background-image: url("https://images.unsplash.com/photo-1485955900006-10f4d324d411");
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.overlay {
+background: rgba(0, 0, 0, 0.55);
+padding: 50px;
+border-radius: 20px;
+text-align: center;
+color: white;
+max-width: 700px;
+backdrop-filter: blur(4px);
+}
+
+.hero-title {
+font-size: 4rem;
+margin-bottom: 20px;
+color: white;
+}
+
+.hero-text {
+font-size: 1.3rem;
+line-height: 1.8;
+margin-bottom: 30px;
+}
+
+.hero-btn {
+background: #2e8b57;
+color: white;
+font-size: 18px;
+padding: 15px 35px;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.hero-btn:hover {
+background: #246b45;
+transform: scale(1.05);
+}
+
+/* NAVBAR */
+
+.navbar {
+background: #2e8b57;
+color: white;
+padding: 18px 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.logo {
+font-size: 24px;
+font-weight: bold;
+}
+
+.nav-links {
+display: flex;
+gap: 25px;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+font-size: 18px;
+font-weight: 500;
+transition: 0.3s;
+}
+
+.nav-links a:hover {
+color: #d4ffd4;
+transform: translateY(-2px);
+}
+
+/* PRODUCT CARDS */
+
+.plant-grid {
+display: flex;
+flex-wrap: wrap;
+gap: 25px;
+justify-content: center;
+padding: 20px;
+}
+
+.plant-card {
+width: 250px;
+background: white;
+border-radius: 18px;
+padding: 18px;
+text-align: center;
+box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+transition: all 0.3s ease;
+}
+
+.plant-card:hover {
+transform: translateY(-10px);
+}
+
+.plant-image {
+width: 100%;
+height: 220px;
+object-fit: cover;
+border-radius: 12px;
+}
+
+.plant-name {
+margin-top: 15px;
+color: #2e8b57;
+font-size: 22px;
+}
+
+.plant-price {
+font-size: 20px;
+font-weight: bold;
+color: #444;
+}
+
+button {
+background: #2e8b57;
+color: white;
+border: none;
+padding: 12px 18px;
+border-radius: 10px;
+cursor: pointer;
+font-weight: bold;
+transition: 0.3s;
+}
+
+button:hover {
+background: #246b45;
+}
+
+/* GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+background: #f4fff4;
+font-family: "Segoe UI", sans-serif;
+color: #333;
+}
+
+a {
+text-decoration: none;
+}
+
+/* NAVBAR */
+
+.navbar {
+background: #2e8b57;
+color: white;
+padding: 18px 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.logo {
+font-size: 26px;
+font-weight: bold;
+}
+
+.nav-links {
+display: flex;
+gap: 25px;
+}
+
+.nav-links a {
+color: white;
+font-size: 18px;
+font-weight: 500;
+transition: 0.3s;
+}
+
+.nav-links a:hover {
+color: #d4ffd4;
+}
+
+/* LANDING PAGE */
+
+.landing-page {
+height: 100vh;
+background-image: url("https://images.unsplash.com/photo-1485955900006-10f4d324d411");
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.overlay {
+background: rgba(0,0,0,0.55);
+padding: 50px;
+border-radius: 25px;
+text-align: center;
+color: white;
+max-width: 700px;
+backdrop-filter: blur(5px);
+}
+
+.hero-title {
+font-size: 4rem;
+margin-bottom: 20px;
+}
+
+.hero-text {
+font-size: 1.3rem;
+line-height: 1.8;
+margin-bottom: 30px;
+}
+
+.hero-btn {
+background: #2e8b57;
+color: white;
+font-size: 18px;
+padding: 15px 35px;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.hero-btn:hover {
+background: #246b45;
+transform: scale(1.05);
+}
+
+/* PRODUCTS */
+
+.products-header {
+text-align: center;
+padding: 30px;
+}
+
+.products-header h1 {
+color: #2e8b57;
+margin-bottom: 15px;
+}
+
+.cart-btn {
+margin-top: 10px;
+}
+
+.category-section {
+margin: 40px;
+}
+
+.category-title {
+color: #2e8b57;
+margin-bottom: 20px;
+font-size: 30px;
+}
+
+.plant-grid {
+display: flex;
+flex-wrap: wrap;
+gap: 25px;
+justify-content: center;
+}
+
+.plant-card {
+width: 260px;
+background: white;
+border-radius: 20px;
+padding: 18px;
+text-align: center;
+box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+transition: 0.3s;
+}
+
+.plant-card:hover {
+transform: translateY(-10px);
+}
+
+.plant-image {
+width: 100%;
+height: 220px;
+object-fit: cover;
+border-radius: 15px;
+}
+
+.plant-name {
+margin-top: 15px;
+color: #2e8b57;
+}
+
+.plant-description {
+color: #666;
+margin: 10px 0;
+}
+
+.plant-price {
+font-size: 22px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+.add-btn {
+width: 100%;
+}
+
+/* BUTTONS */
+
+button {
+background: #2e8b57;
+color: white;
+border: none;
+padding: 12px 18px;
+border-radius: 10px;
+cursor: pointer;
+font-weight: bold;
+transition: 0.3s;
+}
+
+button:hover {
+background: #246b45;
+}
+
+button:disabled {
+background: #999;
+cursor: not-allowed;
+}
+
+/* CART */
+
+.cart-container {
+max-width: 1000px;
+margin: auto;
+padding: 30px;
+}
+
+.cart-title {
+text-align: center;
+color: #2e8b57;
+margin-bottom: 30px;
+}
+
+.cart-summary {
+background: white;
+padding: 25px;
+border-radius: 15px;
+margin-bottom: 30px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cart-actions {
+margin-top: 15px;
+display: flex;
+gap: 15px;
+}
+
+.cart-card {
+background: white;
+padding: 20px;
+border-radius: 15px;
+margin-bottom: 20px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.cart-buttons {
+display: flex;
+gap: 10px;
+}
+
+.remove-btn {
+background: #d9534f;
+}
+
+.remove-btn:hover {
+background: #c9302c;
+}
+
+.empty-cart {
+text-align: center;
+color: #666;
+margin-top: 50px;
+}

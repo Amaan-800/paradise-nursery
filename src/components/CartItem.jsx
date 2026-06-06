@@ -2,59 +2,116 @@ import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  removeItem,
-  increaseQuantity,
-  decreaseQuantity
+removeItem,
+increaseQuantity,
+decreaseQuantity
 } from "../redux/CartSlice";
 
 function CartItem() {
-  const items = useSelector((state) => state.cart.items);
-  const dispatch = useDispatch();
+const items = useSelector((state) => state.cart.items);
+const dispatch = useDispatch();
 
-  const total = items.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+const total = items.reduce(
+(sum, item) => sum + item.price * item.quantity,
+0
+);
 
-  return (
-    <div>
-      <Navbar />
+return ( <div> <Navbar />
 
-      <h1>Shopping Cart</h1>
+```
+  <div className="cart-container">
+    <h1 className="cart-title">
+      🛒 Shopping Cart
+    </h1>
 
-      <h2>Total: ${total}</h2>
+    <div className="cart-summary">
+      <h2>Total Amount: ${total}</h2>
 
-      <Link to="/products">
-        <button>Continue Shopping</button>
-      </Link>
-
-      <button onClick={() => alert("Coming Soon")}>
-        Checkout
-      </button>
-
-      {items.map((item) => (
-        <div key={item.id}>
-          <h3>{item.name}</h3>
-
-          <p>Price: ${item.price}</p>
-
-          <p>Quantity: {item.quantity}</p>
-
-          <button onClick={() => dispatch(increaseQuantity(item.id))}>
-            +
+      <div className="cart-actions">
+        <Link to="/products">
+          <button className="continue-btn">
+            Continue Shopping
           </button>
+        </Link>
 
-          <button onClick={() => dispatch(decreaseQuantity(item.id))}>
-            -
-          </button>
-
-          <button onClick={() => dispatch(removeItem(item.id))}>
-            Remove
-          </button>
-        </div>
-      ))}
+        <button
+          className="checkout-btn"
+          onClick={() =>
+            alert("Checkout Coming Soon!")
+          }
+        >
+          Checkout
+        </button>
+      </div>
     </div>
-  );
+
+    {items.length === 0 ? (
+      <h2 className="empty-cart">
+        Your cart is empty 🌿
+      </h2>
+    ) : (
+      items.map((item) => (
+        <div
+          key={item.id}
+          className="cart-card"
+        >
+          <div>
+            <h3>{item.name}</h3>
+
+            <p>
+              Price: ${item.price}
+            </p>
+
+            <p>
+              Quantity: {item.quantity}
+            </p>
+
+            <p>
+              Total: $
+              {item.price *
+                item.quantity}
+            </p>
+          </div>
+
+          <div className="cart-buttons">
+            <button
+              onClick={() =>
+                dispatch(
+                  increaseQuantity(item.id)
+                )
+              }
+            >
+              +
+            </button>
+
+            <button
+              onClick={() =>
+                dispatch(
+                  decreaseQuantity(item.id)
+                )
+              }
+            >
+              -
+            </button>
+
+            <button
+              className="remove-btn"
+              onClick={() =>
+                dispatch(
+                  removeItem(item.id)
+                )
+              }
+            >
+              Remove
+            </button>
+          </div>
+        </div>
+      ))
+    )}
+  </div>
+</div>
+
+);
 }
 
 export default CartItem;
