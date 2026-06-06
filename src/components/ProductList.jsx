@@ -121,7 +121,7 @@ return ( <div> <Navbar />
                       dispatch(addItem(plant))
                     }
                   >
-                    {added ? "✓ Added" : "Add to Cart"}
+                    {added ? "✓ Added to Cart" : "Add to Cart"}
                   </button>
                 </div>
               );

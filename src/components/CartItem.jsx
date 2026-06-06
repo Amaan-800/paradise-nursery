@@ -102,7 +102,7 @@ return ( <div> <Navbar />
                 )
               }
             >
-              Remove
+              Delete
             </button>
           </div>
         </div>
